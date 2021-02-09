@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 
-const Alert = () => {
-  return <h2>alert component</h2>
-}
+const Alert = ({ alert }) => {
+  return (
+    <p className="alert alert-success">The item has been Added to the list.</p>
+  );
+};
 
-export default Alert
+export default Alert;

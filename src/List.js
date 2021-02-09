@@ -1,7 +1,27 @@
-import React from 'react'
-import { FaEdit, FaTrash } from 'react-icons/fa'
-const List = () => {
-  return <h2>list component</h2>
-}
+import React from "react";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
-export default List
+const List = ({ item, onEdit }) => {
+  return (
+    <div className="grocery-container">
+      <div className="grocery-list">
+        <article className="grocery-item">
+          <p className="title">{item}</p>
+          <div className="btn-container">
+            <button
+              type="button"
+              className="edit-btn"
+              onClick={() => onEdit(item)}>
+              <FaEdit />
+            </button>
+            <button type="button" className="delete-btn">
+              <FaTrash />
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  );
+};
+
+export default List;
